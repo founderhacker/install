@@ -30,7 +30,7 @@
 
   <% if content_for?(:footer) %>
     <footer>
-      <div class="container container-disqus">
+      <div class="container">
         <%= yield(:footer) %>
         <%= render partial: "layouts/development" if Rails.env.development? %>
       </div>

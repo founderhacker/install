@@ -19,8 +19,4 @@
   <p>Once the file has fully downloaded, double-click it. On a Mac: drag and drop <strong>Sublime Text</strong> into your <strong>Applications</strong> folder.</p>
 </section>
 
-<%= render 'layouts/step_navigation' %>
-
-<div id="trouble" class="collapse out note">
-  <%= render 'layouts/disqus' %>
-</div>
+<%= render partial: "layouts/step_navigation", locals: { hide_troubleshooting: true } %>

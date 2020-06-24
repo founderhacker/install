@@ -66,8 +66,4 @@
   </ol>
 </section>
 
-<%= render partial: "layouts/step_navigation" %>
-
-<div id="trouble" class="collapse out note">
-  <%= render 'layouts/disqus' %>
-</div>
+<%= render partial: 'layouts/step_navigation', locals: { hide_troubleshooting: true } %>

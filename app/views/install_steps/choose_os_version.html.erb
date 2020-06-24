@@ -24,10 +24,5 @@
     <%= button_to "10.10", wizard_path, name: :os_version, method: :put, class: "option" %>
     <%= button_to "10.9", wizard_path, name: :os_version, method: :put, class: "option" %>
     <br>
-    <%= button_tag "Troubleshooting", type: "button", class: "troubleshooting", data: {toggle: "collapse", target: "#trouble"} %>
   </div>
-</div>
-
-<div id="trouble" class="collapse out note">
-  <%= render 'layouts/disqus' %>
 </div>
