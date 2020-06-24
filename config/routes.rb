@@ -6,5 +6,5 @@ InstallRails::Application.routes.draw do
     get :congratulations
   end
 
-  root to: 'main#index'
+  root to: 'install_steps#index'
 end
