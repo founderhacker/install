@@ -2,7 +2,10 @@
   <h1>Time to install Rails!</h1>
   <ol>
     <li>
-      <p>Visit the site <%= link_to "Railsinstaller.org", "http://railsinstaller.org/en", target: "_blank" %> and choose from ONE of the following options to download RailsInstaller.</p>
+      <p>
+        Visit <%= link_to "Railsinstaller.org", "http://railsinstaller.org/en", target: "_blank" %> and choose from ONE of the following options.
+        I suggest whatever versions is the newest, such as Ruby 2.3 depicted here.
+      </p>
       <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
           <%= link_to image_tag("windows/install_rails_step1.png", alt: "RailsInstaller", class: "img-responsive"), "http://railsinstaller.org/en", target: "_blank" %>
@@ -26,7 +29,7 @@
   </ol>
 </section>
 
-<%= render partial: "layouts/step_navigation" %>
+<%= render partial: "layouts/step_navigation", locals: { hide_troubleshooting: true } %>
 
 <div id="trouble" class="collapse out note">
 </div>

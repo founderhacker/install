@@ -8,9 +8,11 @@
     </h1>
   </div>
 
-  <p>The command line is a place on your computer where you can type in commands (I'll show you in a moment).</p>
-  <p>After you type them in you'll hit <strong>Enter</strong> to run those commands. And then the magic happens!</p>
-  <p>Never used the command line? You may want to pause and take this <%= link_to "free command line tutorial", "https://onemonth.com/courses/command-line-crash-course?utm_source=installrails&utm_campaign=rails&utm_medium=installrails" %>.</p>
+  <p>Your computer's command line is a place where you can type in executable code.</p>
+  <p>After you type in a command, you’ll hit <strong>Enter</strong> to run it.</p>
+  <p>If you've never used the command line, don't worry. We dedicate an entire module to it in the
+    <%= link_to 'Fundamentals course', ENV['FUNDAMENTALS_COURSE_URL'], target: :_blank %>.</p>
+  <hr>
 
   <hr>
 
@@ -23,7 +25,7 @@
   </ol>
 </section>
 
-<%= render 'layouts/step_navigation' %>
+<%= render partial: "layouts/step_navigation", locals: { hide_troubleshooting: true } %>
 
 <div id="trouble" class="collapse out note">
 </div>
