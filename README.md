@@ -1,6 +1,6 @@
 # Founder/Hacker Environment Install
 
-## Setup in your local
+## Set up locally
 
 1. Install dependencies and run the server:
 
@@ -11,4 +11,4 @@
 
 2. Open `http://localhost:3000` in your browser.
 
-Patches welcome.
+Patches welcome. This repository is a fork of [Install Rails](https://github.com/onemonth/install_rails/).
