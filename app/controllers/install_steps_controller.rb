@@ -56,14 +56,25 @@ class InstallStepsController < ApplicationController
   end
 
   def windows_steps
+    # onemonth.com version
+    # [
+    #   :railsinstaller_windows,
+    #   :find_git_bash,
+    #   :update_rubygems,
+    #   :update_rails,
+    #   :text_editor,
+    #   # :create_your_first_app,
+    #   # :see_it_live
+    # ]
+
     [
-      :railsinstaller_windows,
-      :find_git_bash,
-      :update_rubygems,
-      :update_rails,
       :text_editor,
-      # :create_your_first_app,
-      # :see_it_live
+      :ubuntu,
+      :ruby_rbenv_windows,
+      :git_windows,
+      :rails_windows,
+      :postgres_windows,
+      :test_app_windows # use "create_your_first_app" or "see_it_live" file?
     ]
   end
 

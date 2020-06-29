@@ -56,7 +56,7 @@ section {
   }
 }
 
-.choose_os_version, .install_rails, .update_rubygems {
+.choose_os_version, .install_rails, .update_rubygems, .git_windows {
   background-color: #5B6474;
 
   .note:before {
@@ -64,7 +64,7 @@ section {
   }
 }
 
-.railsinstaller, .railsinstaller_windows {
+.railsinstaller, .railsinstaller_windows, .ubuntu, .postgres_windows {
   .option {
     background-color: rgba(255,255,255,0.9);
     border-color: #fff;
@@ -92,7 +92,7 @@ section {
   }
 }
 
-.railsinstaller, .rails_for_linux_and_other, .install_git, .railsinstaller_windows {
+.railsinstaller, .rails_for_linux_and_other, .install_git, .railsinstaller_windows, .ubuntu, .postgres_windows {
   background-color: #CE613E;
 
   .prompt {
@@ -127,7 +127,7 @@ section {
   }
 }
 
-.configure_git, .find_git_bash, .install_homebrew, .verify_rails_version {
+.configure_git, .find_git_bash, .install_homebrew, .verify_rails_version, .ruby_rbenv_windows {
   background-color: #8E59BC;
 
   .note:before {
@@ -152,7 +152,7 @@ section {
   }
 }
 
-.create_your_first_app, .update_rails {
+.create_your_first_app, .update_rails, .rails_windows, .test_app_windows {
   background: #CF7C00;
 
   .note:before {

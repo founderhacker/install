@@ -1,0 +1,35 @@
+<section class="instructions">
+  <h1>Time to make your PC code-friendly!</h1>
+  <ol>
+    <li>
+      The following instructions assume you have a 64-bit PC. To determine if your PC is 32 vs 64, <%= link_to 'go here', 'https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/', target: :_blank %>.
+      If your computer is 32-bit, please use <%= link_to 'Cloud9', 'https://aws.amazon.com/cloud9/', target: :_blank %> (free) and <%= link_to 'this guide', 'https://www.youtube.com/watch?v=koKmPob8WmA', target: :_blank %> instead.
+    </li>
+
+    <li>
+      In your Windows search bar type "Windows Powershell" and then click "Run as Administrator" on the right side.
+    </li>
+
+    <li>
+      Copy and paste the following 2 commands, 1 at a time (from "dism.." to "restart"), hitting the 'enter' key after each one.
+
+      <pre><code>dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart</code></pre>
+    <p>(If you aren't able to paste with "ctrl+v" try right-clicking to paste instead.)</p>
+    </li>
+
+    <li>Your Powershell should look like this when you're done:
+    <div class="text-center"><%= image_tag "windows/windows-powershell-as-admin.png", class: "img img-responsive" %></div>
+    </li>
+
+    <li>
+      <%= link_to 'Install the Ubuntu app', 'https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6', target: :_blank %> from the Microsoft Store. <br><br>
+      You'll be asked to create a user account. I suggest using whatever your PC id/password combination is. In my case, "ryanckulp" and my log-in password. You will probably need to restart your computer.
+    </li>
+  </ol>
+</section>
+
+<%= render partial: "layouts/step_navigation", locals: { hide_troubleshooting: true } %>
+
+<div id="trouble" class="collapse out note">
+</div>
