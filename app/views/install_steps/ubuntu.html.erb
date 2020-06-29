@@ -1,0 +1,44 @@
+<section class="instructions">
+  <h1>Time to make your PC code-friendly!</h1>
+  <ol>
+    <li>
+      The following instructions assume you have a 64-bit PC. To determine if your PC is 32 vs 64, <%= link_to 'go here', 'https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/', target: :_blank %>.
+      If your computer is 32-bit, please use <%= link_to 'Cloud9', 'https://aws.amazon.com/cloud9/', target: :_blank %> (free) and <%= link_to 'this guide', 'https://www.youtube.com/watch?v=koKmPob8WmA', target: :_blank %> instead.
+    </li>
+
+    <li>
+      In your Windows search bar type "Windows Powershell" and then click "Run as Administrator" on the right side.
+    </li>
+
+    <li>
+      <p>
+        Visit <%= link_to "Railsinstaller.org", "http://railsinstaller.org/en", target: "_blank" %> and choose from ONE of the following options.
+        I suggest whatever versions is the newest, such as Ruby 2.3 depicted here.
+      </p>
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <%= link_to image_tag("windows/install_rails_step1.png", alt: "RailsInstaller", class: "img-responsive"), "http://railsinstaller.org/en", target: "_blank" %>
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <p>Once the file has fully downloaded, double-click it to open the installer wizard.</p>
+      <div class="text-center"><%= image_tag "windows/install_rails_step2.png", alt: "RailsInstaller Wizard" %></div>
+    </li>
+
+    <li>
+      <p>Click '<strong>Next</strong>' for each step - it's okay to accept the default settings.</p>
+      <div class="text-center"><%= image_tag "windows/install_rails_step3.png" %></div>
+    </li>
+
+    <li>
+      <p>When prompted, enter your <strong>name</strong> and <strong>email address</strong><br><small>(don't worry, no one will see this email or spam you, this is purely for setup purposes).</small></p>
+    </li>
+  </ol>
+</section>
+
+<%= render partial: "layouts/step_navigation", locals: { hide_troubleshooting: true } %>
+
+<div id="trouble" class="collapse out note">
+</div>
