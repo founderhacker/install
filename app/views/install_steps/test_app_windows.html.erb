@@ -1,0 +1,61 @@
+<section class="instructions">
+  <h1>Create your first app</h1>
+
+  <ol>
+    <li>
+      Run the <strong>cd</strong> <i>(change directory)</i> command in Ubuntu
+      to change directory into your C Drive. We'll also make you a "code" folder.
+      <pre><code>cd /mnt/c</code></pre>
+      <pre><code>mkdir -p code</code></pre>
+      (Later you can move this folder anywhere you want, e.g. C/Users/Your Name/Documents/code, using the File Explorer)
+    </li>
+
+    <li>
+      Now let's create a new Rails app and set up the database.
+      <pre><code>rails new test_app -d postgresql</code></pre>
+      <pre><code>cd test_app</code></pre>
+      <pre><code>rails db:create</code></pre>
+      <pre><code>rails db:migrate</code></pre>
+
+      <div class="" id="git-intro">
+        <h3>Troubleshooting</h3>
+        <p>
+          During the "rails db:create" command you may receive an error message "/var/postgres: can't connect to database".
+        </p>
+        <p>
+          If this happens, open up the "test_app/config/database.yml" file using the Text Editor you installed previously and add the following two lines (host, password) below "Default:"
+        </p>
+        <pre><code>host: localhost
+password: your_postgres_installation_password</code></pre>
+        <p>The top of your database.yml will look like this:</p>
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <%= image_tag "windows/postgres-database-yml-add-host-and-password.png", alt: "Postgres Windows Database yml", class: "img-responsive" %>
+          </div>
+        </div>
+        <p>After making this change, retry "rails db:create" and "rails db:migrate" commands from above.</p>
+      </div>
+
+    </li>
+
+    <li>Run the app server:
+    <pre><code>rails server</code></pre>
+    You should see some output like:
+    <pre><code>=> Booting WEBrick
+=> Rails 6.0.3.2 application starting in development on http://localhost:3000
+=> Run `rails server -h` for more startup options
+=> Ctrl-C to shutdown server</code></pre>
+    </li>
+
+    <li>
+      Finally, double check you did everything correctly by visiting http://localhost:3000 in your browser.
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <%= image_tag "windows/rails-6-splash-screen.png", alt: "Rails 6 splash screen", class: "img-responsive" %>
+        </div>
+      </div>
+    </li>
+  </ol>
+</section>
+
+<%= render 'layouts/step_navigation' %>

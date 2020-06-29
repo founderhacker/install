@@ -1,0 +1,44 @@
+<section class="instructions">
+  <h1>Time to install a database!</h1>
+
+  <ol>
+    <li>
+      <%= link_to 'Download the latest version here', 'https://www.enterprisedb.com/downloads/postgres-postgresql-downloads', target: :_blank %>
+      underneath the "Windows x86-64" column. In this example it's Version 12.3.
+
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <%= image_tag "windows/postgres-windows-12.3x86.png", alt: "Postgres for Windows", class: "img-responsive" %>
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <p>Once the file has fully downloaded, double-click it to open the installer wizard.</p>
+      <p>You'll be asked to install a few things including "Stack Builder." <strong>Uncheck the permissions box to ignore Stack Builder</strong>.</p>
+    </li>
+
+    <li>
+      You'll be asked to create a database username and password.
+
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <%= image_tag "windows/postgres-installer-password.png", alt: "Postgres installer password", class: "img-responsive" %>
+        </div>
+      </div>
+
+      I suggest again using your Windows user login password, as we did before during Ubuntu setup.
+    </li>
+
+    <li>
+      When the installer is finished, run this command:
+      <pre><code>sudo apt install libpq-dev</code></pre>
+      You may be asked to enter your Windows login password and select "y" (+ enter) when prompted to finish installation.
+    </li>
+  </ol>
+</section>
+
+<%= render partial: "layouts/step_navigation", locals: { hide_troubleshooting: true } %>
+
+<div id="trouble" class="collapse out note">
+</div>

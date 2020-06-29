@@ -69,7 +69,7 @@ class InstallStepsController < ApplicationController
 
     [
       :text_editor,
-      :ubuntu, # windows powershell
+      :ubuntu,
       :ruby_rbenv_windows,
       :git_windows,
       :rails_windows,

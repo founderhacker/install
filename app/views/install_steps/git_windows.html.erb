@@ -1,0 +1,53 @@
+<section class="instructions">
+  <h1>Configure Git</h1>
+  <ol>
+    <li>
+      In your Terminal type:
+      <pre><code>git config --global user.name "<strong>Your Actual Name</strong>"</code></pre>
+    </li>
+
+    <li>
+      And then type:
+      <pre><code>git config --global user.email "<strong>Your Actual Email</strong>"</code></pre>
+      <div class="row">
+        <div class="col-sm-12 note" id="prompt" style="text-align:center;">
+          Your email address should be the same one associated with your <%= link_to "GitHub", "http://help.github.com/articles/set-up-git", target: "_blank" %> account. If you don't have a GitHub account already, <%= link_to 'sign up', 'https://github.com' %> for free.
+        </div>
+      </div>
+    </li>
+
+    <li>
+      Generate an SSH key for your GitHub account:
+      <pre><code>ssh-keygen -t rsa -b 4096 -C "YOUR@EMAIL.com"</code></pre>
+      Now display it inside your terminal:
+      <pre><code>cat ~/.ssh/id_rsa.pub</code></pre>
+      And next you should <%= link_to 'copy/paste the output here', 'https://github.com/settings/ssh/new', target: :_blank %>
+      as a new SSH key (requires GitHub login).
+      <div class="text-center"><%= image_tag "windows/github-add-ssh-key.png", class: "img img-responsive" %></div>
+      (Your SSH key will begin with "ssh-rsa ...." and end with details about your computer.)
+    </li>
+
+    <li>
+      Check your configuration via:
+      <pre><code>ssh -T git@github.com</code></pre>
+    </li>
+
+    <li>
+      You should see a message like:
+      <pre><code>Hi username! You've successfully...</code></pre>
+    </li>
+  </ol>
+  <hr>
+
+  <div class="center" id="git-intro">
+    <h2>Why did we do this? What is Git?</h2>
+    <p>
+    Git is version control software. You will use Git to track and manage your coding history as well as get into the programming community as a whole.
+    </p>
+    <p>
+    Later in the <%= link_to 'Fundamentals course', ENV['FUNDAMENTALS_COURSE_URL'], target: :_blank %> we'll provide a tutorial to get started with Git. For now, just install and forget about it.
+    </p>
+  </div>
+</section>
+
+<%= render partial: "layouts/step_navigation", locals: { hide_troubleshooting: true } %>

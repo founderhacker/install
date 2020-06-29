@@ -11,29 +11,20 @@
     </li>
 
     <li>
-      <p>
-        Visit <%= link_to "Railsinstaller.org", "http://railsinstaller.org/en", target: "_blank" %> and choose from ONE of the following options.
-        I suggest whatever versions is the newest, such as Ruby 2.3 depicted here.
-      </p>
-      <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
-          <%= link_to image_tag("windows/install_rails_step1.png", alt: "RailsInstaller", class: "img-responsive"), "http://railsinstaller.org/en", target: "_blank" %>
-        </div>
-      </div>
+      Copy and paste the following 2 commands, 1 at a time (from "dism.." to "restart"), hitting the 'enter' key after each one.
+
+      <pre><code>dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart</code></pre>
+    <p>(If you aren't able to paste with "ctrl+v" try right-clicking to paste instead.)</p>
+    </li>
+
+    <li>Your Powershell should look like this when you're done:
+    <div class="text-center"><%= image_tag "windows/windows-powershell-as-admin.png", class: "img img-responsive" %></div>
     </li>
 
     <li>
-      <p>Once the file has fully downloaded, double-click it to open the installer wizard.</p>
-      <div class="text-center"><%= image_tag "windows/install_rails_step2.png", alt: "RailsInstaller Wizard" %></div>
-    </li>
-
-    <li>
-      <p>Click '<strong>Next</strong>' for each step - it's okay to accept the default settings.</p>
-      <div class="text-center"><%= image_tag "windows/install_rails_step3.png" %></div>
-    </li>
-
-    <li>
-      <p>When prompted, enter your <strong>name</strong> and <strong>email address</strong><br><small>(don't worry, no one will see this email or spam you, this is purely for setup purposes).</small></p>
+      <%= link_to 'Install the Ubuntu app', 'https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6', target: :_blank %> from the Microsoft Store. <br><br>
+      You'll be asked to create a user account. I suggest using whatever your PC id/password combination is. In my case, "ryanckulp" and my log-in password. You will probably need to restart your computer.
     </li>
   </ol>
 </section>
