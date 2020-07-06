@@ -3,27 +3,28 @@
   <ol>
     <li>The latest edition of Rails requires some JavaScript dependencies. Let's set those up first.
 
-    <pre><code>curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+    <pre><code>curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -</code></pre>
 
-sudo apt update
-sudo apt-get install -y nodejs yarn</code></pre>
-
-<p>(Remember, just triple-click the beginning of each line to get the full command, then copy / paste / execute in your Powershell.)</p><br>
-
-<div class="" id="git-intro">
-  <h3>Troubleshooting</h3>
-  <p>
-  During the "curl -sL" command you may receive an error including "gpg: can't connect to the agent: IPC connect call failed".
-  </p>
-  <p>If this happens, execute the following 4 commands and retry Step #1 above:</p>
-  <pre><code>sudo add-apt-repository ppa:rafaeldtinoco/lp1871129
+    <div class="" id="git-intro">
+      <h3>Troubleshooting</h3>
+      <p>
+      During the "curl -sL" command you may receive an error including "gpg: can't connect to the agent: IPC connect call failed".
+      </p>
+      <p>If this happens, execute the following 4 commands and retry Step #1 above:</p>
+      <pre><code>sudo add-apt-repository ppa:rafaeldtinoco/lp1871129
 sudo apt update
 sudo apt install libc6=2.31-0ubuntu8+lp1871129~1 -y
-sudo apt-mark hold libc6
-</code></pre>
-</div>
+sudo apt-mark hold libc6</code></pre>
+    </div>
+
+    <pre><code>curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -</code></pre>
+    <pre><code>echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list</code></pre>
+
+    <p>Two more commands...</p>
+    <pre><code>sudo apt update</code></pre>
+    <pre><code>sudo apt-get install -y nodejs yarn</code></pre>
+
+<p>(Remember, just triple-click the beginning of each line to get the full command, then copy / paste / execute in your Ubuntu terminal.)</p>
 </li>
 
     <li>Install Rails:
