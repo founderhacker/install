@@ -3,13 +3,12 @@ footer {
   padding-top: 40px;
   padding-bottom: 30px;
   background: $gray-lighter;
+
+  img {
+    max-height: 17px;
+  }
 }
 
-#license {
-  float: right;
-}
-
-#hide-cc {
-  visibility: hidden;
-  display: none;
+#footer-logo-link {
+  vertical-align: text-bottom;
 }

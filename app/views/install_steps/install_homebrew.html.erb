@@ -2,15 +2,20 @@
   <h1>Install Homebrew</h1>
   <ol>
     <li>
-      In your terminal type
+      In your terminal paste:
     </li>
       <pre><code>ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code></pre>
 
-     <div class="row">
-      <div class="col-sm-12 note">
-          <b>Note:</b> If this doesn’t work, <%= link_to "go here", "https://github.com/Homebrew/brew/blob/master/docs/Installation.md" %> and follow the instructions
+      <div class="row">
+       <div class="col-sm-12 note">
+           <b>Troubleshooting</b><br>
+           If the above command yields an error message: "Warning: The Ruby Homebrew installer is now deprecated and has been rewritten in
+Bash," try the following command instead:
+<pre><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"</code></pre>
+
+        <p>If this still doesn’t work, <%= link_to "follow these tips", "https://github.com/Homebrew/brew/blob/master/docs/Installation.md" %> and follow the instructions.</p>
+       </div>
       </div>
-     </div>
     <li>
       To verify your installation, enter the following in your terminal:
     </li>
