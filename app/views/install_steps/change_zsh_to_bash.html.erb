@@ -1,0 +1,31 @@
+<section class="instructions">
+  <h1>Change Zsh to Bash</h1>
+  <p>
+    Bash and Zsh are terminal-level programming languages with slightly different features. Your Mac version uses Zsh by default, but in this course we'll use Bash.
+    <br><br>
+    Follow along below to override your computer's default settings to Bash.
+  </p>
+  <hr>
+
+  <ol>
+    <li>
+      In your terminal, paste and hit enter:
+      <pre><code>chsh -s /bin/bash</code></pre>
+    </li>
+    <li>
+      You'll likely be asked for your password. This is the password you use to log into your Mac after it's turned on. Type it and press enter.
+      <pre><code>Changing shell for {{your_username}}.
+Password for {{your_username}}: </code></pre>
+    </li>
+    <li>
+      To verify your configuration, first close the Terminal via CMD+Q (not just by clicking the 'x'). Then re-open Terminal and type:
+      <pre><code>echo $SHELL</code></pre>
+    </li>
+    <li>
+      In return you should see:
+      <pre><code>/bin/bash</code></pre>
+    </li>
+  </ol>
+</section>
+
+<%= render partial: "layouts/step_navigation", locals: { hide_troubleshooting: true } %>
