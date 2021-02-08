@@ -34,6 +34,11 @@ password: your_postgres_installation_password</code></pre>
           </div>
         </div>
         <p>After making this change, retry "rails db:create" and "rails db:migrate" commands from above.</p>
+        <p>If you still have issues, try changing the `port` in your database.yml file from 5432, to 5433:</p>
+        <pre><code>port: 5433</code></pre>
+        <p>Ensure the "rails db:create" and "rails db:migrate" commands work before continuing.
+        <%= link_to 'Post a bug here', 'https://build.founderhacker.com/new-topic?title=environment+issue&category=bugs', target: :_blank %>
+        if the above troubleshooting steps don't work.</p>
       </div>
 
     </li>
