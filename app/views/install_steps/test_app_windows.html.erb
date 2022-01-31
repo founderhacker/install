@@ -12,8 +12,8 @@
 
     <li>
       Now let's create a new Rails app and set up the database.
-      <pre><code>rails new test_app -d postgresql</code></pre>
-      <pre><code>cd test_app</code></pre>
+      <pre><code>rails new sample_app --database=postgresql --css=tailwind</code></pre>
+      <pre><code>cd sample_app</code></pre>
       <pre><code>rails db:create</code></pre>
       <pre><code>rails db:migrate</code></pre>
 
@@ -23,7 +23,7 @@
           During the "rails db:create" command you may receive an error message "/var/postgres: can't connect to database".
         </p>
         <p>
-          If this happens, open up the "test_app/config/database.yml" file using the Text Editor you installed previously and add the following two lines (host, password) below "Default:"
+          If this happens, open up the "sample_app/config/database.yml" file using the Text Editor you installed previously and add the following two lines (host, password) below "Default:"
         </p>
         <pre><code>host: localhost
 password: your_postgres_installation_password</code></pre>
@@ -36,6 +36,8 @@ password: your_postgres_installation_password</code></pre>
         <p>After making this change, retry "rails db:create" and "rails db:migrate" commands from above.</p>
         <p>If you still have issues, try changing the `port` in your database.yml file from 5432, to 5433:</p>
         <pre><code>port: 5433</code></pre>
+        <p>If your postgres/windows password begins with a number digit, wrap it in single quotes like so:</p>
+        <pre><code>password: '134startwithanumber'</code></pre>
         <p>Ensure the "rails db:create" and "rails db:migrate" commands work before continuing.
         <%= link_to 'Post a bug here', 'https://build.founderhacker.com/new-topic?title=environment+issue&category=bugs', target: :_blank %>
         if the above troubleshooting steps don't work.</p>
@@ -47,7 +49,7 @@ password: your_postgres_installation_password</code></pre>
     <pre><code>rails server</code></pre>
     You should see some output like:
     <pre><code>=> Booting WEBrick
-=> Rails 6.1.1 application starting in development on http://localhost:3000
+=> Rails 7.0.0 application starting in development on http://localhost:3000
 => Run `rails server -h` for more startup options
 => Ctrl-C to shutdown server</code></pre>
     </li>
