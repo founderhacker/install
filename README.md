@@ -1,13 +1,14 @@
 # Founder/Hacker Environment Install
+Set up your Mac or Windows PC to build apps with Ruby, Rails, and Postgres.
 
 ## Set up locally
 
 1. Install dependencies and run the server:
 
-   ```ruby
-   bundle install
-   rails server
-   ```
+```
+bundle install
+rails server
+```
 
 2. Open `http://localhost:3000` in your browser.
 
