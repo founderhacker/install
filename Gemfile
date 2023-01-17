@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.6.5'
+ruby '2.7.6'
 
 gem 'rails', '~> 4.2.0'
 
@@ -34,3 +34,4 @@ gem 'uglifier', '>= 1.3.0'
 gem 'unicorn', require: false
 gem 'wicked', '~> 1.1.0'
 gem 'dotenv-rails'
+gem 'bigdecimal', '1.3.5'
